@@ -113,7 +113,7 @@ export default function HomeBanner() {
                 alt={altText}
                 width={445}
                 height={500}
-                className="mx-auto object-contain"
+                className="mx-auto object-contain bg-primary/10"
               />
             </CarouselItem>
           ))}
