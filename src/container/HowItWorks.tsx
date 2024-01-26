@@ -10,21 +10,21 @@ import { useInViewState } from "@/lib/store";
 
 const CONSULTATION_STEPS = [
   {
-    title: "Answer AI Based Questionnaire",
+    title: "Telemedicine Unveiled",
     description:
-      "Embark on your wellness journey by effortlessly answering AI-based questions about your symptoms and concerns. Tailored just for you, our questionnaire kickstarts the personalized care you deserve.",
+      "Telemedicine, a facet of healthcare telematics, utilizes electronic and telecommunication technologies for remote diagnostics and therapy. This approach facilitates long-distance patient-clinician interactions, offering services such as advice, education, monitoring, and remote admissions. Bridging gaps in access to care, especially in rural or constrained settings, telehealth emerges as a vital solution during outbreaks, epidemics, or when traditional access is restricted.",
     image: howItWorks1,
   },
   {
-    title: "Select Doctor of Your Choice",
+    title: "Addressing Healthcare Challenges",
     description:
-      "Select your perfect match from our array of skilled doctors, each committed to providing top-notch care. Your well-being is in your hands, and our diverse roster ensures a match that suits your unique needs.",
+      "The World Health Organization (WHO) highlights a critical global shortage, amounting to 4.3 million physicians, nurses, and health professionals. This scarcity poses a significant challenge in delivering accessible and timely medical care, emphasizing the urgent need for innovative solutions like Remote Medical Care.",
     image: howItWorks2,
   },
   {
-    title: "Meet With Your Doctor",
+    title: "HealthCare Solutions at Your Fingertips",
     description:
-      "Seamlessly join your doctor for a virtual meeting, where your concerns take center stage. Enjoy the convenience of professional healthcare from the comfort of your own space, empowering you on your path to optimal health.",
+      "Discover 24/7 access to medical expertise through video calls. Connect with local physicians, book online consultations from home, and experience consistent, cutting-edge care tailored to your needs. We value your time, providing punctual service without compromising personalized attention. Your medical health is our priority.",
     image: howItWorks3,
   },
 ];
@@ -54,12 +54,12 @@ export default function HowItWorks() {
       className={`md:space-y-10 space-y-7 lg:mt-36 sm:mt-28 mt-20`}
       id="working"
     >
-      <div className="space-y-2">
+      <div className="space-y-2 md:mb-0 mb-20">
         <h3 className="lg:text-2xl text-center lg:leading-[48px] text-primary text-xl font-semibold text-balance">
-          How it Works?
+          Healthcare Triad
         </h3>
         <h2 className="lg:text-5xl text-center mx-auto lg:leading-tight text-3xl font-bold bg-clip-text text-transparent bg-gradient text-balance max-w-screen-md">
-          Effortless Access to Quality Services
+          Telemedicine, Challenges and Solution
         </h2>
       </div>
       {CONSULTATION_STEPS.map((item, index) => (
@@ -79,9 +79,9 @@ export function HowItWorksCard({ data, index }: HowItWorksProps) {
       <div className="flex flex-col md:gap-10 gap-7 md:basis-1/2 text-left max-w-screen-md">
         <div className="space-y-2">
           <h3 className="lg:text-2xl lg:leading-[48px] text-primary text-xl font-semibold text-balance">
-            Step 0{index + 1}.
+            0{index + 1}.
           </h3>
-          <h2 className="md:text-4xl text-3xl font-bold bg-clip-text text-transparent bg-gradient text-balance max-w-screen-md">
+          <h2 className="lg:text-4xl lg:leading-tight text-3xl font-bold bg-clip-text text-transparent bg-gradient text-balance max-w-screen-md">
             {data.title}
           </h2>
         </div>

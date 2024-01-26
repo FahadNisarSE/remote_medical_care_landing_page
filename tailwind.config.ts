@@ -59,7 +59,7 @@ const config = {
         sm: "calc(var(--radius) - 4px)",
       },
       backgroundImage: {
-        gradient: "linear-gradient(90deg, #546fb4 0%, #2eb9ea 100%)"
+        gradient: "linear-gradient(90deg,#48b98d 15%,#0185cf)"
       },
       keyframes: {
         "accordion-down": {

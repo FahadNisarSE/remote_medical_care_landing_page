@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import DentalPatients from "@/../public/about_us_image.png";
+import DentalPatients from "@/../public/about_us_img.png";
 import { Check } from "lucide-react";
 import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
 import { useInViewState } from "@/lib/store";

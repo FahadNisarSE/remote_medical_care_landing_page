@@ -13,16 +13,12 @@ import Link from "next/link";
 
 import bannerImage1 from "@/../public/banner_img_1.png";
 import bannerImage2 from "@/../public/banner_img_2.png";
-import bannerImage3 from "@/../public/banner_img_3.png";
+import bannerImage3 from "@/../public/banner_img_3.webp";
 import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
 import { useInViewState } from "@/lib/store";
 import { useRef } from "react";
 
 const CarouselData = [
-  {
-    image: bannerImage1,
-    altText: "women using RMC throught table",
-  },
   {
     image: bannerImage2,
     altText: "RMC interface with doctor",
@@ -30,6 +26,10 @@ const CarouselData = [
   {
     image: bannerImage3,
     altText: "RMC interface with patient",
+  },
+  {
+    image: bannerImage1,
+    altText: "women using RMC throught table",
   },
 ];
 
@@ -72,7 +72,7 @@ export default function HomeBanner() {
                 variant: "default",
                 size: "lg",
                 className:
-                  "place-items-centergrid tracking-widest font-semibold",
+                  "place-items-center grid tracking-widest font-semibold",
               })
             )}
             href="#about"
@@ -85,7 +85,7 @@ export default function HomeBanner() {
                 variant: "outline",
                 size: "lg",
                 className:
-                  "place-items-center grid  tracking-widest font-semibold",
+                  "place-items-center grid tracking-widest font-semibold",
               })
             )}
             href="#contact"
@@ -112,8 +112,8 @@ export default function HomeBanner() {
                 src={image}
                 alt={altText}
                 width={445}
-                height={523}
-                className="mx-auto"
+                height={500}
+                className="mx-auto object-contain"
               />
             </CarouselItem>
           ))}

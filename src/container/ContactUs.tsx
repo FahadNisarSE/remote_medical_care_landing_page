@@ -1,23 +1,20 @@
 "use client";
 
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Mail, Map, Phone } from "lucide-react";
+import { Map } from "lucide-react";
 import { useForm } from "react-hook-form";
-import Link from "next/link";
 import * as z from "zod";
 
-import { buttonVariants, Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { cn } from "@/lib/utils";
+import { Button } from "@/components/ui/button";
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
 import { useInViewState } from "@/lib/store";
@@ -75,45 +72,19 @@ export default function ContactUs() {
           </h2>
         </div>
         <p className="sm:text-base text-sm sm:leading-7 sm:text-balance md:max-w-sm">
-          You can always visit us in our comfortable office. View their
-          addresses and opening hours or call/email us directly using the
-          information below.
+          Discover the welcoming atmosphere of our physical office where you can
+          receive the same exceptional care in person. Find our addresses or
+          connect with us directly through the contact form. We value your
+          suggestions and feedback, as we continuously strive to enhance your
+          experience.
         </p>
         <ul className="flex flex-col gap-4">
           <li className="flex items-center gap-2">
-            <Map className="w-6 h-6 text-sky-600 font-bold" />
+            <Map className="w-6 h-6 text-primary font-bold" />
             <address className="px-4 py-2 md:max-w-sm">
               Biotech & Capital Consulting GmbH, Neuffenstr. 35, 73630
               Remshalden, Germany
             </address>
-          </li>
-          <li className="flex items-center gap-2">
-            <Mail className="w-6 h-6 text-sky-600 font-bold" />
-            <Link
-              className={cn(
-                buttonVariants({
-                  variant: "link",
-                  className: "block text-base text-sky-600",
-                })
-              )}
-              href="tel:+49 151 2355214"
-            >
-              +49 151 2355214
-            </Link>
-          </li>
-          <li className="flex items-center gap-2">
-            <Phone className="w-6 h-6 text-sky-600 font-bold" />
-            <Link
-              className={cn(
-                buttonVariants({
-                  variant: "link",
-                  className: "block text-base text-sky-600",
-                })
-              )}
-              href="mailto:info@bnc-consulting.de"
-            >
-              info@bnc-consulting.de
-            </Link>
           </li>
         </ul>
       </div>
