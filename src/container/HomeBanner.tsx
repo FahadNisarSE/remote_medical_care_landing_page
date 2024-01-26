@@ -17,6 +17,7 @@ import bannerImage3 from "@/../public/banner_img_3.webp";
 import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
 import { useInViewState } from "@/lib/store";
 import { useRef } from "react";
+import { hashedImage } from "@/lib/constant";
 
 const CarouselData = [
   {
@@ -113,7 +114,8 @@ export default function HomeBanner() {
                 alt={altText}
                 width={445}
                 height={500}
-                className="mx-auto object-contain bg-primary/10"
+                blurDataURL={hashedImage}
+                className="mx-auto object-contain"
               />
             </CarouselItem>
           ))}
