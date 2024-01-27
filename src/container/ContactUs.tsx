@@ -71,7 +71,7 @@ export default function ContactUs() {
             How to find us
           </h2>
         </div>
-        <p className="sm:text-base text-sm sm:leading-7 sm:text-balance md:max-w-sm">
+        <p className="sm:text-[17px] text-sm leading-loose sm:text-balance md:max-w-sm">
           Discover the welcoming atmosphere of our physical office where you can
           receive the same exceptional care in person. Find our addresses or
           connect with us directly through the contact form. We value your

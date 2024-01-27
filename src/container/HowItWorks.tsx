@@ -1,7 +1,7 @@
 "use client";
 
 import Image, { StaticImageData } from "next/image";
-import howItWorks1 from "@/../public/how_it_works_1.jpg";
+import howItWorks1 from "@/../public/how_it_works_1.png";
 import howItWorks2 from "@/../public/how_it_works_2.jpg";
 import howItWorks3 from "@/../public/how_it_works_3.jpg";
 import { useRef } from "react";
@@ -85,7 +85,7 @@ export function HowItWorksCard({ data, index }: HowItWorksProps) {
             {data.title}
           </h2>
         </div>
-        <p className="sm:text-[17px] sm:leading-loose leading-normal text-sm text-balance">
+        <p className="sm:text-[17px] leading-loose text-sm text-balance">
           {data.description}
         </p>
       </div>

@@ -6,6 +6,9 @@ import { Check } from "lucide-react";
 import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
 import { useInViewState } from "@/lib/store";
 import { useRef } from "react";
+import Link from "next/link";
+import { cn } from "@/lib/utils";
+import { buttonVariants } from "@/components/ui/button";
 
 const KeyPoints = [
   {
@@ -50,22 +53,38 @@ export default function AboutUs() {
             Who we are?
           </h2>
         </div>
-        <p className="sm:text-[17px] text-sm sm:leading-loose leading-normal text-balance max-w-screen-md text-left">
+        <p className="sm:text-[17px] text-sm leading-loose text-balance max-w-screen-md text-left">
           Remote Medical Care (RMC) is revolutionizing healthcare, empowering
           people in rural and remote areas with the same quality of care as
           those in urban centers. Forget long commutes and crowded clinics - our
           personalized healthcare facilities come directly to you, via your
-          mobile phone.Built on cutting-edge technology like IoT devices, we
+          mobile phone. Built on cutting-edge technology like IoT devices, we
           diagnose and treat you right in your home. Our global network of
           healthcare professionals ensures seamless, comprehensive solutions,
           anytime, anywhere. Experience the future of medicine - choose RMC and
-          redefine your well-being.
+          redefine your well-being. <br />
+          <strong>Catch a glimpse of our success:</strong> Explore {" "}
+          <Link
+            className={cn(
+              buttonVariants({
+                variant: "link",
+                className:
+                  "w-fit p-0 sm:text-[17px] text-sm sm:leading-loose leading-normal underline h-auto",
+              })
+            )}
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://dental-telecare.com/"
+          >
+            Remote Dental Care
+          </Link>
+          , the groundbreaking project redefining healthcare access for all.
         </p>
         <ul className="flex-col gap-5 flex">
           {KeyPoints.map((item) => (
             <li key={item.title} className="flex items-start gap-4 font-light">
               <Check className="min-w-6 h-6 text-white bg-gradient p-1 rounded-full" />
-              <p className="sm:text-base text-sm sm:leading-7 sm:text-balance">
+              <p className="sm:text-base text-sm leading-7 sm:text-balance">
                 <strong className="font-semibold">{item.title}:</strong>
                 {item.description}
               </p>

@@ -30,7 +30,7 @@ export default function Services() {
           Innovative Solutions for Your Health Journey
         </h2>
       </div>
-      <p className="sm:text-[17px] sm:leading-loose leading-normal text-sm text-balance max-w-screen-md text-center">
+      <p className="sm:text-[17px] leading-loose text-sm text-balance max-w-screen-md text-center">
         Remote Medical Care redefines digital health care with its unique
         approach, ensuring comprehensive and accessible medical services.
       </p>

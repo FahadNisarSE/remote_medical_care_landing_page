@@ -58,7 +58,7 @@ export default function HomeBanner() {
             Remote Medical Care for All
           </h1>
         </div>
-        <p className="sm:text-[17px] sm:leading-loose leading-normal text-sm text-balance max-w-screen-md sm:text-left text-center">
+        <p className="sm:text-[17px] leading-loose text-sm text-balance max-w-screen-md sm:text-left text-center">
           Remote Medical Care leads the healthcare frontier, bridging gaps,
           empowering patients, and connecting professionals globally. With an
           innovative digital health approach, it revolutionizes medical service
