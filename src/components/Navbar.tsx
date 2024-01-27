@@ -18,7 +18,7 @@ const NavItems = [
   { name: "Home", url: "#home" },
   { name: "Service", url: "#service" },
   { name: "About", url: "#about" },
-  { name: "Working", url: "#working" },
+  { name: "Healthcare Triad", url: "#healthcare" },
   { name: "Contact", url: "#contact" },
 ];
 

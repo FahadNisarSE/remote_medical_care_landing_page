@@ -51,14 +51,15 @@ export default function AboutUs() {
           </h2>
         </div>
         <p className="sm:text-[17px] text-sm sm:leading-loose leading-normal text-balance max-w-screen-md text-left">
-          Telemedicine, within the broader scope of telematics, transforms
-          healthcare with electronic tools for diagnostics and therapy. It
-          enables remote patient-clinician interactions, offering a range of
-          services from consultations to monitoring. In parallel, remote medical
-          care takes this innovation further, connecting professionals and
-          patients worldwide. Committed to inclusivity and accessibility, it
-          ensures seamless, comprehensive healthcare solutions, embodying the
-          future of medical services.
+          Remote Medical Care (RMC) is revolutionizing healthcare, empowering
+          people in rural and remote areas with the same quality of care as
+          those in urban centers. Forget long commutes and crowded clinics - our
+          personalized healthcare facilities come directly to you, via your
+          mobile phone.Built on cutting-edge technology like IoT devices, we
+          diagnose and treat you right in your home. Our global network of
+          healthcare professionals ensures seamless, comprehensive solutions,
+          anytime, anywhere. Experience the future of medicine - choose RMC and
+          redefine your well-being.
         </p>
         <ul className="flex-col gap-5 flex">
           {KeyPoints.map((item) => (

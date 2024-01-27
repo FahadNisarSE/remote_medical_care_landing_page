@@ -11,9 +11,9 @@ import Autoplay from "embla-carousel-autoplay";
 import Image from "next/image";
 import Link from "next/link";
 
-import bannerImage1 from "@/../public/banner_img_1.png";
-import bannerImage2 from "@/../public/banner_img_2.png";
-import bannerImage3 from "@/../public/banner_img_3.webp";
+import bannerImage1 from "../assets/banner_img_1.png";
+import bannerImage2 from "../assets/banner_img_2.png";
+import bannerImage3 from "../assets/banner_img_3.webp";
 import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
 import { useInViewState } from "@/lib/store";
 import { useRef } from "react";

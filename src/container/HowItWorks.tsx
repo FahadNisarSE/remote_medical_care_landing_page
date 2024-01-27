@@ -46,13 +46,13 @@ export default function HowItWorks() {
   });
   const isVisible = !!entry?.isIntersecting;
 
-  if (isVisible) update("#working");
+  if (isVisible) update("#healthcare");
 
   return (
     <section
       ref={sectionRef}
       className={`md:space-y-10 space-y-7 lg:mt-36 sm:mt-28 mt-20`}
-      id="working"
+      id="healthcare"
     >
       <div className="space-y-2 md:mb-0 mb-20">
         <h3 className="lg:text-2xl text-center lg:leading-[48px] text-primary text-xl font-semibold text-balance">
