@@ -7,6 +7,12 @@ import realTimeDiagnostic from "@/../public/realtime_diagnostic.svg";
 
 export const SERVICES = [
   {
+    img: diagnosisImage,
+    title: "Efficient Diagnosis with AI",
+    description:
+      "Harness AI for rapid and precise medical diagnoses, suggesting optimal physicians for a seamless healthcare journey.",
+  },
+  {
     img: onlineConsultingImage,
     title: "Seamless Virtual Consultation",
     description:
@@ -25,12 +31,6 @@ export const SERVICES = [
       "Access expert medical care conveniently through our user-friendly platform.",
   },
   {
-    img: diagnosisImage,
-    title: "Efficient Diagnosis with AI",
-    description:
-      "Leverage the power of AI for swift and accurate medical diagnoses.",
-  },
-  {
     img: medicalTreatementImage,
     title: "Personalized Treatment Plans",
     description:
@@ -40,6 +40,6 @@ export const SERVICES = [
     img: realTimeDiagnostic,
     title: "Realtime Diagnostic Connectivity",
     description:
-      "Experience Cutting-Edge Healthcare with IoT-Based Devices at Home.",
+      "Experience Cutting-Edge Healthcare with IoT-Based diagnosis Devices at Home.",
   },
 ];

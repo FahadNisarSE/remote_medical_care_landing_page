@@ -12,11 +12,11 @@ const CONSULTATION_STEPS = [
   {
     title: "Telemedicine Unveiled",
     description:
-      "Telemedicine, a facet of healthcare telematics, utilizes electronic and telecommunication technologies for remote diagnostics and therapy. This approach facilitates long-distance patient-clinician interactions, offering services such as advice, education, monitoring, and remote admissions. Bridging gaps in access to care, especially in rural or constrained settings, telehealth emerges as a vital solution during outbreaks, epidemics, or when traditional access is restricted.",
+      "Telemedicine, harnessing technology like video calls and online portals, brings healthcare straight to you—a boon for busy professionals, residents with limited mobility, and those in nursing houses. It provides essential services like virtual consultations, remote monitoring, and even admissions, eliminating travel hassles and bridging healthcare gaps. This becomes crucial during outbreaks, epidemics, or in any situation where traditional access is limited, ensuring everyone gets the care they need, without leaving their homes.",
     image: howItWorks1,
   },
   {
-    title: "Addressing Healthcare Challenges",
+    title: "Healthcare Challenges",
     description:
       "The World Health Organization (WHO) highlights a critical global shortage, amounting to 4.3 million physicians, nurses, and health professionals. This scarcity poses a significant challenge in delivering accessible and timely medical care, emphasizing the urgent need for innovative solutions like Remote Medical Care.",
     image: howItWorks2,
@@ -71,9 +71,7 @@ export default function HowItWorks() {
 
 export function HowItWorksCard({ data, index }: HowItWorksProps) {
   return (
-    <div
-      className={`${index % 2 !== 0 ? "bg-alternate_bg" : ""}`}
-    >
+    <div className={`${index % 2 !== 0 ? "bg-alternate_bg" : ""}`}>
       <section
         className={`flex flex-col items-center md:gap-10 gap-7 max-w-[1200px] px-8 mx-auto lg:py-16 sm:py-14 py-10 ${
           index % 2 !== 0 ? "md:flex-row-reverse" : "md:flex-row"

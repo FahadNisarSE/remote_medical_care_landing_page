@@ -107,7 +107,6 @@ export default function HomeBanner() {
           ]}
           className="relative"
         >
-          {/* <div className="gradient-02 absolute left-1/2 top-1/2 opacity-70 pointer-events-none z-10 w-1/2 h-1/2" /> */}
           <CarouselContent>
             {CarouselData.map(({ image, altText }) => (
               <CarouselItem key={altText}>

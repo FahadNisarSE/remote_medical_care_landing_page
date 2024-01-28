@@ -33,7 +33,7 @@ export default function Footer() {
           </p>
           <form
             className="max-w-[600px] mx-auto flex sm:flex-row flex-col items-center gap-4 w-full"
-            onSubmit={() => {}}
+            action='custom url here'
           >
             <Input
               className="rounded sm:max-w-none max-w-72"
@@ -52,10 +52,10 @@ export default function Footer() {
           </p>
           <ul className="flex gap-3">
             <li className="hover:text-primary transition-colors">
-              <Link href="#">Imprint</Link>
+              <Link href="/imprint">Imprint</Link>
             </li>
             <li className="hover:text-primary transition-colors">
-              <Link href="#">Data Privacy</Link>
+              <Link href="/data-privacy">Data Privacy</Link>
             </li>
           </ul>
         </div>

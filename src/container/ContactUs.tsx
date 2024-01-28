@@ -42,6 +42,7 @@ export default function ContactUs() {
     threshold: 0.3,
   });
   const isVisible = !!entry?.isIntersecting;
+  const formRef = useRef<HTMLFormElement | null>(null);
 
   if (isVisible) update("#contact");
 
@@ -53,7 +54,7 @@ export default function ContactUs() {
   });
 
   function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
+    formRef.current?.submit();
   }
 
   return (
@@ -92,6 +93,8 @@ export default function ContactUs() {
         <div>
           <Form {...form}>
             <form
+              ref={formRef}
+              action="custom url here"
               onSubmit={form.handleSubmit(onSubmit)}
               className="gap-y-8 gap-x-4 grid sm:grid-col-2"
             >

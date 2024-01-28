@@ -55,15 +55,18 @@ export default function AboutUs() {
             </h2>
           </div>
           <p className="sm:text-[17px] text-sm leading-loose text-balance max-w-screen-md text-left">
-            Remote Medical Care (RMC) is revolutionizing healthcare, empowering
-            people in rural and remote areas with the same quality of care as
-            those in urban centers. Forget long commutes and crowded clinics -
-            our personalized healthcare facilities come directly to you, via
-            your mobile phone. Built on cutting-edge technology like IoT
-            devices, we diagnose and treat you right in your home. Our global
-            network of healthcare professionals ensures seamless, comprehensive
-            solutions, anytime, anywhere. Experience the future of medicine -
-            choose RMC and redefine your well-being. <br />
+            Remote Medical Care (RMC) is transforming healthcare, providing
+            individuals, including busy professionals, those with disabilities,
+            and residents of nursing homes, with access to high-quality care
+            comparable to urban centers. Bid farewell to lengthy commutes and
+            crowded clinics as our personalized healthcare services are brought
+            directly to you through your mobile phone. Utilizing advanced
+            technologies such as IoT devices and Artifical Intelligence, we conduct diagnoses and
+            treatments within the comfort of your home. With our healthcare
+            solution, we present seamless, comprehensive solutions for
+            organizations, addressing diverse needs anytime, anywhere. Embrace
+            the future of medical solutions with RMC and redefine the well-being
+            of your organization and its members. <br />
             <strong>Catch a glimpse of our success:</strong> Explore{" "}
             <Link
               className={cn(
@@ -83,10 +86,7 @@ export default function AboutUs() {
           </p>
           <ul className="flex-col gap-5 flex">
             {KeyPoints.map((item) => (
-              <li
-                key={item.title}
-                className="flex items-start gap-4"
-              >
+              <li key={item.title} className="flex items-start gap-4">
                 <Check className="min-w-6 h-6 text-white bg-gradient p-1 rounded-full" />
                 <p className="sm:text-base text-sm leading-7 sm:text-balance">
                   <strong className="font-semibold">{item.title}: </strong>
