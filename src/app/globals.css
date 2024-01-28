@@ -7,6 +7,13 @@
 }
 
 
+.gradient-02 {
+  position: absolute;
+  background: linear-gradient(90deg,#48b98d 15%,#0185cf);
+  filter: blur(175px);
+  transform: rotate(-114.2deg);
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;

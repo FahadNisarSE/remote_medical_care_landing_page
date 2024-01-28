@@ -29,7 +29,7 @@ export default function RootLayout({
       <body style={inter.style}>
         <SectionInViewContextProvider>
           <Navbar />
-          <main className={`max-w-[1200px] mx-auto px-8 sm:mt-0 mt-28`}>{children}</main>
+          <main className={`lg:mt-20 mt-28`}>{children}</main>
           <Footer />
         </SectionInViewContextProvider>
       </body>

@@ -38,7 +38,7 @@ export default function Navbar() {
           />
         </Link>
 
-        <ul className="lg:flex hidden items-center gap-4">
+        <ul className="lg:flex hidden items-center gap-6">
           {NavItems.map((item) => (
             <li
               key={item.name}
@@ -52,27 +52,17 @@ export default function Navbar() {
             </li>
           ))}
         </ul>
-
-        <Link
-          className={cn(
-            buttonVariants({
-              variant: "outline",
-              size: "lg",
-              className:
-                "place-items-center lg:grid hidden tracking-widest font-semibold",
-            })
-          )}
-          href="#newsletter"
-        >
-          Newsletter
-        </Link>
         <DropdownMenu>
           <DropdownMenuTrigger className="lg:hidden">
             <Menu className="w-8 h-8" />
           </DropdownMenuTrigger>
           <DropdownMenuContent className="mr-4">
             {NavItems.map((item) => (
-              <Link href={item.url} key={item.name} className="font-medium tracking-wider">
+              <Link
+                href={item.url}
+                key={item.name}
+                className="font-medium tracking-wider"
+              >
                 <DropdownMenuItem>{item.name}</DropdownMenuItem>
               </Link>
             ))}

@@ -3,7 +3,7 @@
 import Image, { StaticImageData } from "next/image";
 import howItWorks1 from "@/../public/how_it_works_1.png";
 import howItWorks2 from "@/../public/how_it_works_2.jpg";
-import howItWorks3 from "@/../public/how_it_works_3.jpg";
+import howItWorks3 from "@/../public/how_it_works_3.png";
 import { useRef } from "react";
 import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
 import { useInViewState } from "@/lib/store";
@@ -51,10 +51,10 @@ export default function HowItWorks() {
   return (
     <section
       ref={sectionRef}
-      className={`md:space-y-10 space-y-7 lg:mt-36 sm:mt-28 mt-20`}
+      className={`md:space-y-10 space-y-7`}
       id="healthcare"
     >
-      <div className="space-y-2 md:mb-0 mb-20">
+      <div className="space-y-2 max-w-[1200px] px-8 mx-auto lg:py-16 sm:py-14 py-10">
         <h3 className="lg:text-2xl text-center lg:leading-[48px] text-primary text-xl font-semibold text-balance">
           Healthcare Triad
         </h3>
@@ -71,31 +71,35 @@ export default function HowItWorks() {
 
 export function HowItWorksCard({ data, index }: HowItWorksProps) {
   return (
-    <section
-      className={`flex flex-col items-center md:gap-10 gap-7 lg:mt-36 sm:mt-28 mt-20 ${
-        index % 2 !== 0 ? "md:flex-row-reverse" : "md:flex-row"
-      }`}
+    <div
+      className={`${index % 2 !== 0 ? "bg-alternate_bg" : ""}`}
     >
-      <div className="flex flex-col md:gap-10 gap-7 md:basis-1/2 text-left max-w-screen-md">
-        <div className="space-y-2">
-          <h3 className="lg:text-2xl lg:leading-[48px] text-primary text-xl font-semibold text-balance">
-            0{index + 1}.
-          </h3>
-          <h2 className="lg:text-4xl lg:leading-tight text-3xl font-bold bg-clip-text text-transparent bg-gradient text-balance max-w-screen-md">
-            {data.title}
-          </h2>
+      <section
+        className={`flex flex-col items-center md:gap-10 gap-7 max-w-[1200px] px-8 mx-auto lg:py-16 sm:py-14 py-10 ${
+          index % 2 !== 0 ? "md:flex-row-reverse" : "md:flex-row"
+        }`}
+      >
+        <div className="flex flex-col md:gap-10 gap-7 md:basis-1/2 text-left max-w-screen-md">
+          <div className="space-y-2">
+            <h3 className="lg:text-2xl lg:leading-[48px] text-primary text-xl font-semibold text-balance">
+              0{index + 1}.
+            </h3>
+            <h2 className="lg:text-4xl lg:leading-tight text-3xl font-bold bg-clip-text text-transparent bg-gradient text-balance max-w-screen-md">
+              {data.title}
+            </h2>
+          </div>
+          <p className="sm:text-[17px] leading-loose text-sm text-balance">
+            {data.description}
+          </p>
         </div>
-        <p className="sm:text-[17px] leading-loose text-sm text-balance">
-          {data.description}
-        </p>
-      </div>
-      <Image
-        src={data.image}
-        alt={data.title}
-        width={500}
-        height={500}
-        className="md:ml-auto aspect-square object-cover object-center rounded-full md:basis-1/2"
-      />
-    </section>
+        <Image
+          src={data.image}
+          alt={data.title}
+          width={500}
+          height={500}
+          className="md:ml-auto aspect-square object-cover object-center rounded-full md:basis-1/2"
+        />
+      </section>
+    </div>
   );
 }

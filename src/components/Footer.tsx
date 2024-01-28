@@ -19,7 +19,7 @@ export default function Footer() {
 
   return (
     <footer
-      className="w-full md:p-12 md:pt-28 p-6 pt-12 bg-[#23232f] text-white lg:mt-36 sm:mt-24 mt-20"
+      className="w-full md:p-12 md:pt-28 p-6 pt-12 bg-[#23232f] text-white"
       id="newsletter"
     >
       <div className="flex flex-col md:gap-10 gap-7 max-w-[1200px] mx-auto">

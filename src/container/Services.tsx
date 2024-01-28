@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import ServiceCard from "@/components/ServiceCard";
 import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
@@ -19,7 +19,7 @@ export default function Services() {
   return (
     <section
       ref={sectionRef}
-      className="lg:mt-36 sm:mt-28 mt-20 flex flex-col md:gap-10 gap-7 items-center text-center"
+      className="max-w-[1200px] px-8 mx-auto lg:py-16 sm:py-14 py-10 md:min-h-screen flex flex-col md:gap-10 gap-7 items-center text-center"
       id="service"
     >
       <div className="space-y-2">
