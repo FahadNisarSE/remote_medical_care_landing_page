@@ -19,6 +19,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
 import { useInViewState } from "@/lib/store";
 import { useRef } from "react";
+import { toast } from "sonner";
 
 const formSchema = z.object({
   firstName: z.string().min(2, {
@@ -53,8 +54,34 @@ export default function ContactUs() {
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    formRef.current?.submit();
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    try {
+      const { email, firstName, lastName, message } = values;
+
+      const encodedData = new URLSearchParams({
+        firstName,
+        lastName,
+        email,
+        message,
+      }).toString();
+
+      const response = await fetch("ajax.php", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
+        body: encodedData,
+      });
+
+      if (!response.ok) {
+        throw new Error(`Error submitting form: ${response.statusText}`);
+      }
+
+      toast.success("Your message was sent successfully.");
+    } catch (error) {
+      toast.error("Something went wrong. Please try again.");
+      console.error("Error submitting form:", error);
+    }
   }
 
   return (

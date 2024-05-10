@@ -6,6 +6,7 @@ import { useRef } from "react";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import Link from "next/link";
+import { toast } from "sonner";
 
 export default function Footer() {
   const update = useInViewState((state) => state.update);
@@ -14,8 +15,37 @@ export default function Footer() {
     threshold: 0.3,
   });
   const isVisible = !!entry?.isIntersecting;
+  const email = useRef("");
 
   if (isVisible) update("");
+
+  async function onSubmit() {
+    if (email.current) {
+      try {
+        const encodedData = new URLSearchParams({
+          firstName: "",
+          lastName: "",
+          email: email.current,
+          message: "",
+        }).toString();
+
+        const response = await fetch("ajax.php", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/x-www-form-urlencoded",
+          },
+          body: encodedData,
+        });
+
+        if (!response.ok) {
+          throw new Error(`Error submitting form: ${response.statusText}`);
+        }
+
+        toast.success('Subscribed to Remote Med Tech successfully.')
+      } catch (error) {
+        toast.error("Something went wrong. Please try again.")      }
+    }
+  }
 
   return (
     <footer
@@ -28,20 +58,27 @@ export default function Footer() {
             Remote Medical Care
           </h2>
           <p className="sm:text-[17px] text-gray-400 sm:leading-loose leading-normal text-sm text-balance max-w-screen-md text-center">
-            Get latest information about RMC innovations and inventions? Subscribe
-            to our newletter to get latest information directly in you inbox.
+            Get latest information about RMC innovations and inventions?
+            Subscribe to our newletter to get latest information directly in you
+            inbox.
           </p>
           <form
             className="max-w-[600px] mx-auto flex sm:flex-row flex-col items-center gap-4 w-full"
-            action='custom url here'
+            action="custom url here"
           >
             <Input
               className="rounded sm:max-w-none max-w-72"
               type="email"
+              onChange={(e) => (email.current = e.target.value)}
               required={true}
               placeholder="Enter you email"
             />
-            <Button className="rounded" type="submit" size="lg">
+            <Button
+              onClick={() => onSubmit()}
+              className="rounded"
+              type="submit"
+              size="lg"
+            >
               Subscribe
             </Button>
           </form>

@@ -1,14 +1,12 @@
 "use client";
 
-import Image from "next/image";
-import DentalPatients from "@/../public/about_us_img.png";
-import { Check } from "lucide-react";
+import { buttonVariants } from "@/components/ui/button";
 import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
 import { useInViewState } from "@/lib/store";
-import { useRef } from "react";
-import Link from "next/link";
 import { cn } from "@/lib/utils";
-import { buttonVariants } from "@/components/ui/button";
+import { Check } from "lucide-react";
+import Link from "next/link";
+import { useRef } from "react";
 
 const KeyPoints = [
   {
@@ -58,15 +56,16 @@ export default function AboutUs() {
             Remote Medical Care (RMC) is transforming healthcare, providing
             individuals, including busy professionals, those with disabilities,
             and residents of nursing homes, with access to high-quality care
-            comparable to urban centers. Bid farewell to lengthy commutes and
-            crowded clinics as our personalized healthcare services are brought
-            directly to you through your mobile phone. Utilizing advanced
-            technologies such as IoT devices and Artifical Intelligence, we conduct diagnoses and
-            treatments within the comfort of your home. With our healthcare
+            comparable to traditional healthcare. Say goodbye to long commutes
+            and crowded waiting rooms! Our personalized healthcare services come
+            to you through your mobile phone. Utilizing advanced technologies
+            such as IoT devices and Artifical Intelligence, we conduct diagnoses
+            and treatments within the comfort of your home. With our healthcare
             solution, we present seamless, comprehensive solutions for
-            organizations, addressing diverse needs anytime, anywhere. Embrace
-            the future of medical solutions with RMC and redefine the well-being
-            of your organization and its members. <br />
+            organizations like clinics, health insurance companies and
+            governments, addressing diverse needs anytime, anywhere. Embrace the
+            future of medical solutions with RMC and redefine the well-being of
+            your organization and its members. <br />
             <strong>Catch a glimpse of our success:</strong> Explore{" "}
             <Link
               className={cn(
@@ -96,8 +95,8 @@ export default function AboutUs() {
             ))}
           </ul>
         </div>
-        <Image
-          src={DentalPatients}
+        <img
+          src='about_us_img.png'
           alt="Dental Care Patients"
           width={445}
           height={523}

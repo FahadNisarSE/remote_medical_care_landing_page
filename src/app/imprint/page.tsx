@@ -66,7 +66,7 @@ const Imprint = () => {
       <div className="mt-4">
         <p className="sm:text-[17px] leading-loose text-sm text-balance">
           <strong>
-            Third-Party Copyrights – Credits for Images and Graphics Used:
+            Third-Party Copyrights - Credits for Images and Graphics Used:
           </strong>{" "}
           Shutterstock
         </p>
@@ -74,7 +74,7 @@ const Imprint = () => {
 
       <div className="mt-4">
         <p className="sm:text-[17px] leading-loose text-sm text-balance">
-          In its judgment of 12 May 1998 – 312 O 85/98 – "Liability for Links",
+          In its judgment of 12 May 1998 - 312 O 85/98 - &#34;Liability for Links&#34;,
           the Hamburg Regional Court (LG) ruled that by placing a link, one may
           be jointly responsible for the content of the linked page. According
           to the LG, this can only be prevented by expressly distancing oneself
@@ -95,7 +95,7 @@ const Imprint = () => {
       <div className="mt-4">
         <p className="sm:text-[17px] leading-loose text-sm text-balance">
           <strong>Disclaimer:</strong> The information on this website is to be
-          understood as "statements per se" without implied warranties of any
+          understood as &#34;statements per se&#34; without implied warranties of any
           kind. The information provided on this website has been carefully
           checked and is regularly updated. However, no guarantee can be given
           that all information is complete, correct, and up-to-date at all

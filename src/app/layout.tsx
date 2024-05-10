@@ -4,13 +4,14 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { SectionInViewContextProvider } from "@/lib/ContextWrapper";
+import { Toaster } from "sonner";
 
 // const onest = Onest({ subsets: ["latin"], display: "swap" });
 const inter = Inter({
   subsets: ["latin"],
   display: "swap",
   weight: ["400", "500", "600", "700"],
-  fallback: ['system-ui', 'sans-serif']
+  fallback: ["system-ui", "sans-serif"],
 });
 
 export const metadata: Metadata = {
@@ -31,6 +32,11 @@ export default function RootLayout({
           <Navbar />
           <main className={`lg:mt-20 mt-28`}>{children}</main>
           <Footer />
+          <Toaster
+            closeButton={true}
+            richColors={true}
+            position="bottom-center"
+          />
         </SectionInViewContextProvider>
       </body>
     </html>

@@ -1,9 +1,7 @@
 "use client";
 
-import Icon from "@/../public/remote_medical_care.svg";
 import { cn } from "@/lib/utils";
 import { Menu } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
 import { buttonVariants } from "./ui/button";
 import {
@@ -31,8 +29,8 @@ export default function Navbar() {
     <nav className="fixed shadow-sm top-0 inset-x-0 bg-white z-50">
       <div className="flex items-center justify-between px-8 py-6 max-w-[1200px] mx-auto">
         <Link href="/" className="outline-transparent">
-          <Image
-            src={Icon}
+          <img
+            src='remote_medical_care.svg'
             alt="Remote Medical Care"
             width={200}
             height={100}

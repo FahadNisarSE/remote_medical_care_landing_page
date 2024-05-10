@@ -1,7 +1,5 @@
-import Image, { StaticImageData } from "next/image";
-
 interface Service {
-  img: StaticImageData;
+  img: string;
   title: string;
   description: string;
 }
@@ -39,7 +37,7 @@ export default function ServiceCard({ service }: { service: Service }) {
       </svg>
       <div className="flex flex-col items-start gap-5 text-left">
         <div className="bg-gradient w-20 h-20 grid place-items-center p-2 rounded-full">
-          <Image
+          <img
             src={service.img}
             alt={service.title}
             width={40}

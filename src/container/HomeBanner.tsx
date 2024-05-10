@@ -8,27 +8,23 @@ import {
 } from "@/components/ui/carousel";
 import { cn } from "@/lib/utils";
 import Autoplay from "embla-carousel-autoplay";
-import Image from "next/image";
 import Link from "next/link";
 
-import bannerImage1 from "@/../public/banner_img_1.png";
-import bannerImage2 from "@/../public/banner_img_2.png";
-import bannerImage3 from "@/../public/banner_img_3.webp";
 import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
 import { useInViewState } from "@/lib/store";
 import { useRef } from "react";
 
 const CarouselData = [
   {
-    image: bannerImage2,
+    image: "banner_img_1.png",
     altText: "RMC interface with doctor",
   },
   {
-    image: bannerImage3,
+    image: "banner_img_2.png",
     altText: "RMC interface with patient",
   },
   {
-    image: bannerImage1,
+    image: "banner_img_3.webp",
     altText: "women using RMC throught table",
   },
 ];
@@ -110,7 +106,7 @@ export default function HomeBanner() {
           <CarouselContent>
             {CarouselData.map(({ image, altText }) => (
               <CarouselItem key={altText}>
-                <Image
+                <img
                   src={image}
                   alt={altText}
                   width={320}
